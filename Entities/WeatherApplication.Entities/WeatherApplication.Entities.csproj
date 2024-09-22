@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Concrete\DTOs\" />
+    <Folder Include="Concrete\DTOs\District\" />
+    <Folder Include="Concrete\DTOs\WeatherReport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Concrete\" />
+    <None Remove="Concrete\TableModels\" />
+    <None Remove="Concrete\DTOs\District\" />
+    <None Remove="Concrete\DTOs\WeatherReport\" />
+    <None Remove="Concrete\TableModels\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\WeatherApplication.Core\WeatherApplication.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+</Project>

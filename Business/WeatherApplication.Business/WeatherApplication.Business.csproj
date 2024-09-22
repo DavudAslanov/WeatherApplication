@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Abstracts\" />
+    <None Remove="Concrete\" />
+    <None Remove="BaseMessages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseMessages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Entities\WeatherApplication.Entities\WeatherApplication.Entities.csproj" />
+    <ProjectReference Include="..\..\Core\WeatherApplication.Core\WeatherApplication.Core.csproj" />
+    <ProjectReference Include="..\..\DataAccess\WeatherApplication.DataAccess\WeatherApplication.DataAccess.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
